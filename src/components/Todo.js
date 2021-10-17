@@ -1,10 +1,8 @@
 import React from "react";
 
-const Todo = () => {
+const Todo = ({todo}) => {
     return (
-        <div>
-            
-        </div>
+        <li className="taskListItem">{todo.task}</li>
     )
 }
 export default Todo
