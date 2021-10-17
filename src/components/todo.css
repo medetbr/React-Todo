@@ -1,0 +1,31 @@
+.appTitle{
+    margin: 10px;
+    font-size: 35px;
+    color: rgb(62, 65, 65);
+}
+.todoForm{
+    display: flex;
+    align-items: center;
+    padding-top: 13px;
+    border-top: 1px solid #999;
+}
+.addTaskInput{
+    padding: 3.5px 10px;
+    font-size: 18px;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+.addTaskInput:focus{
+    outline: none;
+}
+
+.addButton{
+    background-color: dodgerblue;
+    color: #fff;
+    font-weight: 600;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;    
+}
