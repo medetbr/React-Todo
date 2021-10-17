@@ -47,4 +47,14 @@ ul{
     color: red;
     font-weight: bold;
     padding-right: 10px;
+    font-size: 18px;
+}
+.inputToggle{
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+.complatedTask{
+    text-decoration: line-through;
+    text-decoration-color: red;
 }

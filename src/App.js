@@ -22,11 +22,18 @@ function App() {
   const removeTask = (id) => {
     setTodos(todos.filter(todo => todo.id !== id))
   }
+  const complatedTask = (id) => {
+    setTodos(todos.map(todo => {if (todo.id === id) {
+      return {...todo,complated: !todo.complated}
+    }
+      return todo;
+    }))
+  }
   return (
     <div className="App">
       <p className="appTitle">React Todo</p>
       <TodoForm addTodo={addTodo} />
-      <TodoList removeTask={removeTask} todos={todos}/>
+      <TodoList complatedTask={complatedTask} removeTask={removeTask} todos={todos}/>
     </div>
   );
 }
