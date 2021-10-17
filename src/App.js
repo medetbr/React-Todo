@@ -1,6 +1,6 @@
 import TodoForm from "./components/TodoForm";
 import "./components/todo.css"
-import React,{ useState } from "react";
+import React,{ useEffect, useState } from "react";
 import TodoList from "./components/TodoList";
 
 function App() {
@@ -9,6 +9,16 @@ function App() {
   const addTodo = (todo) => {
     setTodos([todo,...todos])
   }
+  useEffect(() => {
+    if (localStorage.getItem("save")) {
+      setTodos(JSON.parse(localStorage.getItem("save")))
+    }
+    localStorage.setItem("save",JSON.stringify(todos))
+  },[])
+
+  useEffect(() => {
+    localStorage.setItem("save",JSON.stringify(todos))
+  },[todos])
   const removeTask = (id) => {
     setTodos(todos.filter(todo => todo.id !== id))
   }
