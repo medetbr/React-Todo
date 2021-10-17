@@ -9,11 +9,14 @@ function App() {
   const addTodo = (todo) => {
     setTodos([todo,...todos])
   }
+  const removeTask = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
   return (
     <div className="App">
       <p className="appTitle">React Todo</p>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos}/>
+      <TodoList removeTask={removeTask} todos={todos}/>
     </div>
   );
 }
